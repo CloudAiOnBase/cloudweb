@@ -5,6 +5,8 @@ const AuthLayout = lazy(() => import('@/components/layouts/AuthLayout'));
 const RootLayout = lazy(() => import('@/components/layouts/RootLayout'));
 const Main = lazy(() => import("./_root/Main"));
 
+import '@/globals.css'
+import { Docs, PrivacyPolicy } from './_root';
 
 const App = () => {
   return (
@@ -20,6 +22,9 @@ const App = () => {
           {/* private routes */}
           <Route element={<RootLayout />}>
             <Route index element={<Main />} />
+            <Route path="/docs" element={<Docs />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            {/* <Route path="/docs/:slug" element={<Main />} /> */}
           </Route>
 
         </Routes>
