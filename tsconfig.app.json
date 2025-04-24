@@ -23,11 +23,20 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-    
+    /* Shadcn */
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@/frontend/*": ["../frontend/*"],
+			"@/private/*": ["private/*"],
+			"@/icons/*": ["./src/icons/*"],
+			"@/icons/assets/*": ["./src/icons/assets/*"],
+			"@/root/*": ["./*"],
+			"@/components/*": ["src/components/*"],
+			"@/hooks/*": ["src/hooks/*"],
+			"@/lib/*": ["src/lib/*"],
+			"@/styles/*": ["src/styles/*"]
+		}    
   },
   "include": ["src"]
 }
