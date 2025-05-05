@@ -9,7 +9,7 @@ export const SecondaryHoverButton = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-      "group relative w-auto cursor-pointer overflow-hidden rounded-lg border bg-transparent text-foreground hover:bg-background p-2 px-6 text-center font-semibold transition-all duration-300",
+      "font-outfit border-white group relative w-auto cursor-pointer overflow-hidden rounded-lg border bg-transparent text-foreground hover:bg-background p-2 px-6 text-center font-semibold transition-all duration-450",
       className,
       )}
       {...props}

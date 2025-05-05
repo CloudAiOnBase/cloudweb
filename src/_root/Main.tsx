@@ -1,7 +1,8 @@
 import Hero from '@/components/sections/Hero'
+
 import Loader from '@/components/shared/Loader'
 import { Suspense } from 'react'
-import Docs from './Docs'
+
 
 const Main = () => {
   return (
@@ -11,7 +12,9 @@ const Main = () => {
 
         <div className="w-full">
           <Hero />
-          <Docs />
+
+
+          
         </div>
 
       </Suspense>

@@ -3,11 +3,7 @@
 import React, { forwardRef, useRef } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatedBeam } from "@/components/magicui/animated-beam";
-import CloudeAI from '../../../public/cloudCoin.jpg'
-import Cloudinha from '../../../public/icons/cloudinha_ai.png'
-import Max from '../../../public/icons/max_ai.png'
-
+import { AnimatedBeam } from "../magicui/animated-beam";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -17,7 +13,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0 0 20px -12px rgba(0,0,0,1)]",
+        "z-10 flex size-12 items-center justify-center rounded-full border-2 border-border bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className,
       )}
     >
@@ -28,7 +24,7 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
-export function AnimatedBeamMultipleOutputDemo({
+export function AnimatedBeamMultipleInputDemo({
   className,
 }: {
   className?: string;
@@ -51,70 +47,64 @@ export function AnimatedBeamMultipleOutputDemo({
       ref={containerRef}
     >
       <div className="flex size-full max-w-lg flex-row items-stretch justify-between gap-10">
+        <div className="flex flex-col justify-center gap-2">
+          <Circle ref={div1Ref}>
+            <Icons.googleDrive />
+          </Circle>
+          <Circle ref={div2Ref}>
+            <Icons.googleDocs />
+          </Circle>
+          <Circle ref={div3Ref}>
+            <Icons.whatsapp />
+          </Circle>
+          <Circle ref={div4Ref}>
+            <Icons.messenger />
+          </Circle>
+          <Circle ref={div5Ref}>
+            <Icons.notion />
+          </Circle>
+        </div>
+        <div className="flex flex-col justify-center">
+          <Circle ref={div6Ref} className="size-16">
+            <Icons.openai />
+          </Circle>
+        </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div7Ref}>
             <Icons.user />
           </Circle>
         </div>
-        <div className="flex flex-col justify-center">
-          <Circle ref={div6Ref} className="size-16">
-            <img src={CloudeAI} alt="CloudeAI" className="h-full w-full object-contain" />
-          </Circle>
-        </div>
-        <div className="flex flex-col justify-center gap-2">
-          <Circle className="w-20 h-12" ref={div1Ref}>
-            <img src={Cloudinha} alt="Cloudinha" />
-          </Circle>
-          <Circle className="w-18" ref={div2Ref}>
-            <img src={Max} alt="Max" />
-          </Circle>
-          <Circle className="w-20 h-12" ref={div3Ref}>
-            {/* <Icons.openai /> */}
-          </Circle>
-          <Circle className="w-18" ref={div4Ref}>
-            {/* <Icons.messenger /> */}
-          </Circle>
-          <Circle className="w-20" ref={div5Ref}>
-            {/* <Icons.notion /> */}
-          </Circle>
-        </div>
       </div>
 
-      {/* AnimatedBeams */}
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div1Ref}
         toRef={div6Ref}
-        duration={3}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div6Ref}
-        duration={3}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={div6Ref}
-        duration={0}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div4Ref}
         toRef={div6Ref}
-        duration={0}      />
+      />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div5Ref}
         toRef={div6Ref}
-        duration={0}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div6Ref}
         toRef={div7Ref}
-        duration={3}
       />
     </div>
   );

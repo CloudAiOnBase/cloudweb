@@ -5,8 +5,9 @@ const Loader = () => {
   return (
     <div className="loader-screen">
         <Mirage
-          size="60"
+          size="77"
           speed="1.7"
+          color="#f79562"
         />
       </div>
   )
