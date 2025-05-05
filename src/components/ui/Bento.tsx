@@ -9,6 +9,7 @@ import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 // import AnimatedListDemo from "./AnimatedList";
 import { VerticalMarquee } from "@/components/sections/VerticalMarquee";
 import { ClientTweetCard } from "@/components/ui/ClientTweetCard";
+import { AnimatedBeamMultipleInputDemo } from "./AnimatedBeamMultipleInput";
 
 const files = [
   {
@@ -40,7 +41,7 @@ const features = [
     description: "All your record encrypted and safe.",
     href: "https://basescan.org/token/0x2425598dD959E47a294A737eE4104316864817cf",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-3 sm:col-span-1 md:col-span-1", // Adjusted for smaller screens
     background: (
       <Marquee
         pauseOnHover
@@ -75,7 +76,7 @@ const features = [
     description: "Get notified by market reactions.",
     href: "https://x.com/CloudAiOnBase",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 sm:col-span-3 md:col-span-2", // Adjusted for smaller screens
     background: (
       <ClientTweetCard id="1888892087736975634" className="absolute right-2 top-4 h-[300px] w-full scale-90 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-92" />),
   },
@@ -85,16 +86,23 @@ const features = [
     description: "Supports 100+ integrations and counting.",
     href: "https://cloudaionbase.netlify.app/docs/",
     cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
+    className: "col-span-3 sm:col-span-4 md:col-span-2", // Adjusted for smaller screens
     background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      <>
+        <div className="sm:hidden md:block">
+          <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+        </div>
+        <div className="sm:block md:hidden">
+          <AnimatedBeamMultipleInputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+        </div>
+      </>
     ),
   },
   {
     Icon: MdOutlineHive,
     name: "Agents",
     description: "Get to know the agents under the cloudAI umbrella.",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-3 sm:col-span-2 md:col-span-1", // Adjusted for smaller screens
     href: "https://cloudaionbase.netlify.app/docs/agents/",
     cta: "Learn more",
     background: (
@@ -107,6 +115,7 @@ const features = [
 ];
 
 export function HeroBento() {
+
   return (
     <BentoGrid>
       {features.map((feature, idx) => (

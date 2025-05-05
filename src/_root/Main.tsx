@@ -1,10 +1,7 @@
 import Hero from '@/components/sections/Hero'
+
 import Loader from '@/components/shared/Loader'
 import { Suspense } from 'react'
-import Workflows from '@/components/ui/workflows'
-
-
-
 
 
 const Main = () => {
@@ -15,7 +12,8 @@ const Main = () => {
 
         <div className="w-full">
           <Hero />
-          <Workflows />
+
+
           
         </div>
 

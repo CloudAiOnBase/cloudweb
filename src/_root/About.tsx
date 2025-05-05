@@ -2,7 +2,10 @@
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className="w-screen flex items-center justify-center">
+      About
+
+    </div>
   )
 }
 
