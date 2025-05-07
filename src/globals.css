@@ -309,9 +309,6 @@
   height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
-.content-height2 {
-  height: calc(100vh - var(--header-height2) - var(--footer-height2));
-}
 
 @theme inline {
   --color-background: var(--bg-light);
