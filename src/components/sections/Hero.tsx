@@ -33,7 +33,7 @@ const Hero = () => {
 
       {/* Right Side */}
       <div className="flex justify-center items-center">
-        <div className="w-full max-h-[90vh] sm:max-h-[100vh] lg:max-h-[120vh] overflow-hidden">
+        <div className="w-full max-h-[180vh] sm:max-h-[130vh] lg:max-h-[120vh] overflow-hidden">
           <HeroBento />
         </div>
       </div>
