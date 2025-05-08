@@ -89,10 +89,10 @@ const features = [
     className: "col-span-3 sm:col-span-4 md:col-span-2", // Adjusted for smaller screens
     background: (
       <>
-        <div className="sm:hidden md:block">
+        <div className="hidden sm:hidden md:block">
           <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
         </div>
-        <div className="sm:block md:hidden">
+        <div className="block sm:block md:hidden">
           <AnimatedBeamMultipleInputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
         </div>
       </>
