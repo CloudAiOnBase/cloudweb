@@ -9,7 +9,7 @@ import { SecondaryHeroButton } from "../ui/SecondaryHeroButton"
 const Hero = () => {
   return (
 
-    <section className="pt-5 pb-20 w-screen grid grid-cols-1 lg:grid-cols-2 items-center px-4 sm:px-7 lg:px-12 gap-8">
+    <section className="pt-7 pb-20 w-screen grid grid-cols-1 lg:grid-cols-2 items-center px-4 sm:px-7 lg:px-12 lg:pr-7 gap-8">
       {/* Left Side */}
       <div className="flex flex-col justify-center items-start md:px-4">
         <Version />
