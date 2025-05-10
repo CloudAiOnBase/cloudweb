@@ -17,7 +17,7 @@ export function VerticalMarquee({
     <div className={cn("relative flex h-[500px] w-full overflow-hidden", className)} {...props}>
       <Marquee pauseOnHover={pauseOnHover} vertical className="[--duration:25s]">
         {tweetIds.map((id) => (
-          <SmallClientTweetCard key={id} id={id} className="transform scale-80"/>
+          <SmallClientTweetCard key={id} id={id} className="transform scale-90"/>
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>

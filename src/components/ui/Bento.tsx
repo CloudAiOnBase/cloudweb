@@ -9,7 +9,7 @@ import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 // import AnimatedListDemo from "./AnimatedList";
 import { VerticalMarquee } from "@/components/sections/VerticalMarquee";
 import { ClientTweetCard } from "@/components/ui/ClientTweetCard";
-import { AnimatedBeamMultipleInputDemo } from "./AnimatedBeamMultipleInput";
+// import { AnimatedBeamMultipleInputDemo } from "./AnimatedBeamMultipleInput";
 
 const files = [
   {
@@ -78,7 +78,10 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 sm:col-span-3 md:col-span-2", // Adjusted for smaller screens
     background: (
-      <ClientTweetCard id="1888892087736975634" className="absolute right-2 top-4 h-[300px] w-full scale-90 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-92" />),
+      <ClientTweetCard
+        id="1888892087736975634"
+        className="absolute pb-7 inset-0 m-auto h-[300px] w-[90%] scale-100 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-92"
+      />),
   },
   {
     Icon: Share2Icon,
@@ -88,14 +91,17 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 sm:col-span-4 md:col-span-2", // Adjusted for smaller screens
     background: (
-      <>
-        <div className="hidden sm:hidden md:block">
-          <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
-        </div>
-        <div className="block sm:block md:hidden">
-          <AnimatedBeamMultipleInputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
-        </div>
-      </>
+      // <>
+      //   <div className="hidden sm:hidden md:block">
+      //     <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      //   </div>
+      //   <div className="block sm:block md:hidden">
+      //     <AnimatedBeamMultipleInputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      //   </div>
+      // </>
+      <div className="">
+        <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      </div>
     ),
   },
   {
