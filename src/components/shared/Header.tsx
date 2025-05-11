@@ -35,9 +35,9 @@ const Header = () => {
           </li>
           <span className="border-l border-gray-300 h-6 self-center"></span>
           <li className="space-x-1">
-            <Link className="common transition duration-250" to="/">
+            <Link className="common transition duration-250" to="https://www.coingecko.com/en/coins/cloudai">
               <div className="flex items-center gap-1 hover:bg-violet-500/10 px-2">
-                <a href="https://www.coingecko.com/en/coins/cloudai"><img src={coingecko} alt="coingecko" className="size-7" /></a>
+                <img src={coingecko} alt="coingecko" className="size-6" />
                 <span className="hidden sm:inline">Coingecko</span>
               </div>
             </Link>
