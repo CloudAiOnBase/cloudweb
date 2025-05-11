@@ -7,7 +7,8 @@ const Loader = () => {
         <Mirage
           size="77"
           speed="1.7"
-          color="#f79562"
+          // color="#f79562"
+          color="#06b6d4"
         />
       </div>
   )

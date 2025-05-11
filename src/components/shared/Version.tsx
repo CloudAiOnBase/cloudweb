@@ -8,11 +8,12 @@ const Version: React.FC = () => {
                 <a href='/' className='bg-[linear-gradient(to_right,_#8b5cf6,_#06b6d4,_#8b5cf6,_#06b6d4)] bg-[length:300%_auto] animate-gradient bg-clip-text text-transparent'>
                     <div className="flex items-center underline">
                         {/* <h6>v0.3 is live!</h6> */}
-                        <h6>beta</h6>
+                        <h6>v0.1</h6>
                     </div>
                 </a>
-                <span className="hidden md:inline ml-2 font-mono sm:text-sm text-zinc-700 tracking-wider">is live!</span>
                 {/* <span className="hidden md:inline ml-2 font-mono sm:text-sm text-zinc-700 tracking-wider">Start your Journey here!</span> */}
+                {/* <span className=" hidden md:inline ml-2 font-italic font-montserrat sm:text-sm text-zinc-700 tracking-wider">Our conviction is in the Code</span> */}
+                <span className=" hidden md:inline ml-2 font-monosm:text-sm text-zinc-700 tracking-wider">is live!</span>
             </div>
         </div>
     );

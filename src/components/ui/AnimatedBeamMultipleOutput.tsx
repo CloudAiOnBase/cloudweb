@@ -5,8 +5,8 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import CloudeAI from '../../../public/cloudCoin.jpg'
-import Cloudinha from '../../../public/icons/cloudinha_ai.png'
-import Max from '../../../public/icons/max_ai.png'
+import Cloudinha from '../../../public/icons/ia_cloudinha.png'
+import Max from '../../../public/icons/ia_max.png'
 
 
 const Circle = forwardRef<

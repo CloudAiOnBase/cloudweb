@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
-import { FaFileLines, FaDiscord, FaToriiGate } from "react-icons/fa6";
+import { FaDiscord } from "react-icons/fa6";
 // import { LuArrowUpRight } from "react-icons/lu";
 import Logo from "@/components/shared/Logo";
+import coingecko from "../../../public/icons/ic_coingecko.png"
+import Motto from "./Motto";
 
 const Header = () => {
   return (
@@ -10,12 +12,33 @@ const Header = () => {
         <Link to="/" className="flex-shrink-0">
           <Logo />
         </Link>
+        <div className="hidden lg:flex items-center justify-center flex-grow">
+          <Motto />
+        </div>
         <ul className="z-50 flex space-x-2 ml-auto mr-4 text-zinc-700 items-center">
+          <li className="space-x-1">
+            <Link className="common transition duration-250" target="_blank" rel="noopener noreferrer" to="https://wallet.coinbase.com/">
+              <div className="flex items-center gap-1 hover:bg-violet-500/10 px-2">
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="#3f3f46"
+                  stroke="#3f3f46" stroke-linecap="round" stroke-linejoin="round"
+                  id="Brand-Coinbase--Streamline-Tabler"
+                  className="size-5">
+                  <path d="M12.95 22c-4.503 0 -8.445 -3.04 -9.61 -7.413 -1.165 -4.373 0.737 -8.988 4.638 -11.25a9.906 9.906 0 0 1 12.008 1.598l-3.335 3.367a5.185 5.185 0 0 0 -7.354 0.013 5.252 5.252 0 0 0 0 7.393 5.185 5.185 0 0 0 7.354 0.013L20 19.088A9.887 9.887 0 0 1 12.95 22z" stroke-width="2"></path></svg>
+
+                <span className="hidden sm:inline">Coinbase</span>
+              </div>
+            </Link>
+          </li>
+          <span className="border-l border-gray-300 h-6 self-center"></span>
           <li className="space-x-1">
             <Link className="common transition duration-250" to="/">
               <div className="flex items-center gap-1 hover:bg-violet-500/10 px-2">
-                <FaToriiGate />
-                <span className="hidden sm:inline">Home</span>
+                <a href="https://www.coingecko.com/en/coins/cloudai"><img src={coingecko} alt="coingecko" className="size-7" /></a>
+                <span className="hidden sm:inline">Coingecko</span>
               </div>
             </Link>
           </li>
@@ -24,16 +47,7 @@ const Header = () => {
             <Link className="common transition duration-250" target="_blank" rel="noopener noreferrer" to="https://discord.com/invite/cqvUdjSZUR">
               <div className="flex items-center gap-1 hover:bg-violet-500/10 px-2">
                 <FaDiscord className="size-6" />
-                <span className="hidden sm:inline">Community</span>
-              </div>
-            </Link>
-          </li>
-          <span className="border-l border-gray-300 h-6 self-center"></span>
-          <li className="space-x-1">
-            <Link className="common transition duration-250" target="_blank" rel="noopener noreferrer" to="https://cloudaionbase.netlify.app/docs/">
-              <div className="flex items-center gap-1 hover:bg-violet-500/10 px-2">
-                <FaFileLines />
-                <span className="hidden sm:inline">Docs</span>
+                <span className="hidden sm:inline">Discord</span>
               </div>
             </Link>
           </li>
