@@ -1,5 +1,5 @@
 import { FaGithub, FaXTwitter } from "react-icons/fa6"
-import uniswap from "../../../public/icons/ic_uni.png"
+import coingecko from "../../../public/icons/ic_coingecko.png"
 import dex from "../../../public/icons/ic_dex.png"
 
 const Footer = () => {
@@ -10,7 +10,9 @@ const Footer = () => {
                 <div className="">© <span className="font-mono">{new Date().getFullYear()}</span> CloudAI | All Rights Reserved</div>
 
                 <div className="flex items-center gap-2">
-                    <a href="https://app.uniswap.org/explore/tokens/base/0x2425598dd959e47a294a737ee4104316864817cf"><img src={uniswap} alt="Uniswap" className="size-7" /></a>
+                    <a href="https://www.coingecko.com/en/coins/cloudai">
+                        <img src={coingecko} alt="coingecko" className="size-7 "/>
+                    </a>
                     <a href="https://dexscreener.com/base/0x0dc88ca39B46Ae5A43Afef291710D01CE3f86077"><img src={dex} alt="dex" className="size-7" /></a>
                     
                     <span className="hidden md:flex border-l border-gray-300 h-6 self-center"></span>
